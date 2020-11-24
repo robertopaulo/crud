@@ -1,4 +1,4 @@
-# crud
+# CRUD
 Antes de Abrir o arquivo Index.php no servidor local, você deve criar um banco de dados e uma tabela.	<BR>
 Usando o Prompt de comando do mysql, você deve escrever o código abaixo.<br>
 	
