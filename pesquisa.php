@@ -1,13 +1,9 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <title>Pesquisar</title>
   </head>
   <body>
@@ -17,14 +13,15 @@
         <h1 class="display-4">Pesquisar</h1>
         
         <?php
+          //Verifica se há alguma palavra a ser perquisada, através do input de nome 'busca'
         if(isset($_POST['busca'])){
             $pesquisa = $_POST['busca'];
         } else {
             $pesquisa = '' ;
         }
         include "conexao.php";
-        $sql = "SELECT *  FROM pessoa WHERE nome LIKE '%$pesquisa%'";
-
+          //Realiza uma consulta, com o valor passado no INPUT
+        $sql = "SELECT * FROM pessoa WHERE nome LIKE '%$pesquisa%'";
         $dados = mysqli_query($conexao,$sql);
         ?>
         <nav class="navbar navbar-light bg-light">
@@ -47,6 +44,7 @@
             </thead>
             <tbody>
             <?php
+              //Laço que Retorna uma linha da tabela correspondente a Busca, a cada iteração.
                 while($linha = mysqli_fetch_assoc($dados)) {
                     $id =$linha['id'];
                     $nome =$linha['nome'];
@@ -105,10 +103,8 @@
             document.getElementById('nome_p').value = nome;
             document.getElementById('id').value = id;
         }
-    </script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      </script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
  </body>
 </html>
