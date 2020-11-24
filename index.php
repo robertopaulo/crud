@@ -19,28 +19,7 @@
         <a class="btn btn-primary btn-lg" href="cadastro.php" role="button">Cadastrar</a>
         <a class="btn btn-info btn-lg" href="pesquisa.php" role="button">Pesquisar</a>
     </div>
-    <?php
-      //$servidor = "localhost";
-     // $usuario = "root";
-      //$senha = "";  
-
-      // conectar
-      //$conexao=mysqli_connect($servidor, $usuario, $senha);
-      //if( !$conexao){ 
-      //    echo "Erro na conexão com o servidor:";
-      //}
-      //$sql = "CREATE DATABASE cadastro";
-      ///if ($conexao->query($sql) === TRUE) {
-      //    echo "Database created successfully";
-     // } else {
-      //  $sqla = "USE cadastro";
-      //  if ($conexao->query($sqla) === TRUE) {
-      //    echo "USANDO";
-     // }
-     // }
     
-      
-    ?>
     
   
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
