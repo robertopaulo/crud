@@ -68,18 +68,11 @@
                             onclick=" .'"' ."pegar_dados($id, '$nome')" .'"' .">Excluir</a>
                             </td>
                     </tr>";
-                    
                 }
-                
             ?>
-                
             </tbody>
             </table>
-
-        
             <a href="index.php" class=" btn btn-primary">Voltar</a>
-        
-        
         </div>
     </div>
   </div>
