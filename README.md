@@ -1,8 +1,6 @@
 # crud
 Antes de Abrir o arquivo Index.php no servidor local, você deve criar um banco de dados e uma tabela.	<BR>
-Caso prefira usar phpMyAdmin:	<BR>
--Crie um banco de dados chamado: cadastro , utf8_unicode_ci		<BR>
--Crie uma tabela chamada "pessoa" com 6 atributos: "ID,NOME,ENDERECO,TELEFONE,EMAIL,DATA DE NASCIMENTO"	<BR>
+Usando o Prompt de comando do mysql, você deve escrever o código abaixo.<br>
 	
 CREATE DATABASE cadastro;	<BR>
 CREATE TABLE pessoa (	<BR>
@@ -13,3 +11,7 @@ CREATE TABLE pessoa (	<BR>
             email VARCHAR(255) NOT NULL,	<BR>
             dt_nasc DATE NOT NULL	<BR>
             );	<BR>
+	
+Caso prefira usar phpMyAdmin:	<BR>
+-Crie um banco de dados chamado: cadastro , utf8_unicode_ci		<BR>
+-Crie uma tabela chamada "pessoa" com 6 atributos: "ID,NOME,ENDERECO,TELEFONE,EMAIL,DATA DE NASCIMENTO"	<BR>
