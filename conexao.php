@@ -5,7 +5,7 @@
             $senha = "";        //COLOCAR A SUA SENHA
             $bd = "cadastro";   
 
-            // Realiza conexão com o banco de dados 
+            // Realiza conexão com o servidor
             $conexao=mysqli_connect($servidor, $usuario, $senha, $bd);
             if( !$conexao){ 
                 echo "Erro na conexão com o servidor:";
