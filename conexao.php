@@ -1,17 +1,17 @@
 <?php
+            //Credenciais de conexão
             $servidor = "localhost";
             $usuario = "root";  //COLOCAR O SEU USUÁRIO (CASO SEJA DIFERENTE)
             $senha = "";        //COLOCAR A SUA SENHA
             $bd = "cadastro";   
 
-            // conectar
+            // Realiza conexão com o banco de dados 
             $conexao=mysqli_connect($servidor, $usuario, $senha, $bd);
             if( !$conexao){ 
                 echo "Erro na conexão com o servidor:";
             }
-
-
-           function mensagem($texto, $tipo) {
+            //Função imprime uma caixa de texto com o valor de $texto, e com a cor especificada por $tipo. 
+            function mensagem($texto, $tipo) {
                echo "<div class='alert alert-$tipo' role='alert'> $texto </div>";
-           }
+            }
 ?>
