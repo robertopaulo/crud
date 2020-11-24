@@ -14,7 +14,7 @@
             include "conexao.php";
             $id = $_POST['id'];
             $nome = $_POST['nome'];
-          //Excluí a linha da tabela que possui o ID correspondente, passado pelo método POST
+          //Exclui a linha da tabela que possui o ID correspondente, passado pelo método POST
             $sql = "DELETE FROM `pessoa`  WHERE id = $id ";
             if(mysqli_query($conexao,$sql)){
                 mensagem ("$nome Excluído com Sucesso",'success');
